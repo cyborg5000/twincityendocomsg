@@ -56,7 +56,7 @@ export function HomePage() {
               <img
                 src="/images/190123-3226-CP-811-080319-s.png"
                 alt="Dental microscope"
-                className="rounded-2xl shadow-2xl w-full object-cover"
+                className="rounded-xl w-full object-cover"
               />
             </div>
           </div>

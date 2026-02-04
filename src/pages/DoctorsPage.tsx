@@ -5,34 +5,16 @@ import { ArrowRight } from 'lucide-react';
 
 const doctors = [
   {
-    name: 'Dr. Leslie Ang',
-    title: 'Endodontist',
-    education: 'University of Pennsylvania',
-    image: '/images/Asset-3@2x-1.png',
-  },
-  {
-    name: 'Dr. Lin Yu-Ping, Kimmy',
-    title: 'Endodontist',
-    education: 'Texas A&M Baylor',
-    image: '/images/Asset-6@2x-1.png',
-  },
-  {
-    name: 'Dr. SooHyung Kim',
-    title: 'Endodontist',
-    education: 'Harvard University',
-    image: '/images/Asset-7@2x-1.png',
-  },
-  {
-    name: 'Dr. Renee Fan Yuehong',
-    title: 'Endodontist',
-    education: 'University of San Francisco',
-    image: '/images/Asset-8@2x-2.png',
-  },
-  {
     name: 'Dr. Richard Ang',
     title: 'Endodontist',
     education: 'University of Otago',
-    image: '/images/Asset-9@2x-2.png',
+    image: '/images/Asset-3@2x-1.png',
+  },
+  {
+    name: 'Dr. Leslie Ang',
+    title: 'Endodontist',
+    education: 'University of Pennsylvania',
+    image: '/images/Asset-7@2x-1.png',
   },
   {
     name: 'Dr. Lim Kian Chong, Gerald',
@@ -41,9 +23,27 @@ const doctors = [
     image: '/images/TCE-Doctor-Dr-Gerald-Lim.jpg',
   },
   {
+    name: 'Dr. Lin Yu-Ping, Kimmy',
+    title: 'Endodontist',
+    education: 'Texas A&M Baylor',
+    image: '/images/Asset-6@2x-1.png',
+  },
+  {
+    name: 'Dr. Renee Fan Yuehong',
+    title: 'Endodontist',
+    education: 'University of San Francisco',
+    image: '/images/Asset-9@2x-2.png',
+  },
+  {
+    name: 'Dr. SooHyung Kim',
+    title: 'Endodontist',
+    education: 'Harvard University',
+    image: '/images/Asset-8@2x-2.png',
+  },
+  {
     name: 'Dr. Surein Angamuthu',
     title: 'Endodontist',
-    education: 'University of Singapore',
+    education: 'National University of Singapore',
     image: '/images/Twin-City-Dr-Surein-Angamuthu.jpg',
   },
 ];

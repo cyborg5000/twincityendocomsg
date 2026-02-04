@@ -30,6 +30,10 @@ export function Navigation() {
     setIsOpen(false);
   }, [location]);
 
+  // Logo size based on scroll state
+  const logoHeight = isScrolled ? 'h-10' : 'h-14';
+  const headerHeight = isScrolled ? 'h-16' : 'h-20';
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -47,69 +51,66 @@ export function Navigation() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Main navigation row */}
-        <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Mobile: Center Logo + Left Menu Button */}
-          <div className="lg:hidden flex items-center flex-1">
-            <button
-              className="p-2 rounded-md text-gray-700 hover:bg-gray-100 -ml-2"
-              onClick={() => setIsOpen(!isOpen)}
-            >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-            
-            {/* Centered Logo on Mobile */}
-            <Link to="/" className="flex-1 flex justify-center">
-              <img
-                src="/images/twin-city-dental.svg"
-                alt="Twin City Endodontics"
-                className="h-10 w-auto"
-              />
-            </Link>
-            
-            {/* Phone button on right */}
-            <a href="tel:+6590170923" className="p-2">
-              <Phone className="w-5 h-5 text-[#2D5B5F]" />
-            </a>
-          </div>
+      <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${headerHeight} transition-all duration-300 flex items-center justify-between`}>
+        {/* Mobile: Center Logo + Left Menu Button */}
+        <div className="lg:hidden flex items-center flex-1">
+          <button
+            className="p-2 rounded-md text-gray-700 hover:bg-gray-100 -ml-2"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+          
+          {/* Centered Logo on Mobile - shrinks on scroll */}
+          <Link to="/" className="flex-1 flex justify-center">
+            <img
+              src="/images/twin-city-dental.svg"
+              alt="Twin City Endodontics"
+              className={`${logoHeight} w-auto transition-all duration-300`}
+            />
+          </Link>
+          
+          {/* Phone button on right */}
+          <a href="tel:+6590170923" className="p-2">
+            <Phone className="w-5 h-5 text-[#2D5B5F]" />
+          </a>
+        </div>
 
-          {/* Desktop: Logo + Nav + CTA */}
-          <div className="hidden lg:flex items-center justify-between w-full">
-            {/* Logo */}
-            <Link to="/" className="flex items-center space-x-2">
-              <img
-                src="/images/twin-city-dental.svg"
-                alt="Twin City Endodontics"
-                className="h-14 w-auto"
-              />
-            </Link>
+        {/* Desktop: Logo + Nav + CTA */}
+        <div className="hidden lg:flex items-center justify-between w-full">
+          {/* Logo - larger at top, shrinks on scroll */}
+          <Link to="/" className="flex items-center space-x-2">
+            <img
+              src="/images/twin-city-dental.svg"
+              alt="Twin City Endodontics"
+              className={`${logoHeight} w-auto transition-all duration-300`}
+            />
+          </Link>
 
-            {/* Desktop Navigation */}
-            <nav className="flex items-center space-x-1">
-              {navItems.map((item) => (
-                <Link
-                  key={item.href}
-                  to={item.href}
-                  className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${
-                    location.pathname === item.href
-                      ? 'text-[#2D5B5F] bg-[#2D5B5F]/10'
-                      : 'text-gray-700 hover:text-[#2D5B5F] hover:bg-gray-100'
-                  }`}
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </nav>
+          {/* Desktop Navigation */}
+          <nav className="flex items-center space-x-1">
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                to={item.href}
+                className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${
+                  location.pathname === item.href
+                    ? 'text-[#2D5B5F] bg-[#2D5B5F]/10'
+                    : 'text-gray-700 hover:text-[#2D5B5F] hover:bg-gray-100'
+                }`}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
 
-            {/* CTA Button */}
-            <a href="tel:+6590170923">
-              <Button className="bg-[#2D5B5F] hover:bg-[#1A3D42] text-white">
-                <Phone className="w-4 h-4 mr-2" />
-                Book Now
-              </Button>
-            </a>
-          </div>
+          {/* CTA Button */}
+          <a href="tel:+6590170923">
+            <Button className="bg-[#2D5B5F] hover:bg-[#1A3D42] text-white">
+              <Phone className="w-4 h-4 mr-2" />
+              Book Now
+            </Button>
+          </a>
         </div>
       </div>
 

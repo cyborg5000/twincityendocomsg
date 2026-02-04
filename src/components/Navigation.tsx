@@ -36,77 +36,113 @@ export function Navigation() {
         isScrolled ? 'bg-white/95 backdrop-blur-md shadow-md' : 'bg-white'
       }`}
     >
+      {/* Top bar with phone number - desktop only */}
+      <div className="hidden lg:block bg-[#2D5B5F] text-white text-sm py-2">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+          <span>Twin City Endodontics - Expert Endodontic Care Since 2008</span>
+          <div className="flex items-center space-x-4">
+            <span>📍 Ngee Ann City #08-07 | Forum #06-04</span>
+            <span>📞 +65 6235 9888 / +65 6235 3063</span>
+          </div>
+        </div>
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <img
-              src="/images/twin-city-dental.svg"
-              alt="Twin City Endodontics"
-              className="h-12 w-auto"
-            />
-          </Link>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-1">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                to={item.href}
-                className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                  location.pathname === item.href
-                    ? 'text-[#2D5B5F] bg-[#2D5B5F]/10'
-                    : 'text-gray-700 hover:text-[#2D5B5F] hover:bg-gray-100'
-                }`}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </nav>
-
-          {/* CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <a href="tel:+6590170923">
-              <Button className="bg-[#2D5B5F] hover:bg-[#1A3D42] text-white">
-                <Phone className="w-4 h-4 mr-2" />
-                +65 9017 0923
-              </Button>
+        {/* Main navigation row */}
+        <div className="flex items-center justify-between h-16 lg:h-20">
+          {/* Mobile: Center Logo + Left Menu Button */}
+          <div className="lg:hidden flex items-center flex-1">
+            <button
+              className="p-2 rounded-md text-gray-700 hover:bg-gray-100 -ml-2"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+            
+            {/* Centered Logo on Mobile */}
+            <Link to="/" className="flex-1 flex justify-center">
+              <img
+                src="/images/twin-city-dental.svg"
+                alt="Twin City Endodontics"
+                className="h-10 w-auto"
+              />
+            </Link>
+            
+            {/* Phone button on right */}
+            <a href="tel:+6590170923" className="p-2">
+              <Phone className="w-5 h-5 text-[#2D5B5F]" />
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          {/* Desktop: Logo + Nav + CTA */}
+          <div className="hidden lg:flex items-center justify-between w-full">
+            {/* Logo */}
+            <Link to="/" className="flex items-center space-x-2">
+              <img
+                src="/images/twin-city-dental.svg"
+                alt="Twin City Endodontics"
+                className="h-14 w-auto"
+              />
+            </Link>
+
+            {/* Desktop Navigation */}
+            <nav className="flex items-center space-x-1">
+              {navItems.map((item) => (
+                <Link
+                  key={item.href}
+                  to={item.href}
+                  className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${
+                    location.pathname === item.href
+                      ? 'text-[#2D5B5F] bg-[#2D5B5F]/10'
+                      : 'text-gray-700 hover:text-[#2D5B5F] hover:bg-gray-100'
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
+
+            {/* CTA Button */}
+            <a href="tel:+6590170923">
+              <Button className="bg-[#2D5B5F] hover:bg-[#1A3D42] text-white">
+                <Phone className="w-4 h-4 mr-2" />
+                Book Now
+              </Button>
+            </a>
+          </div>
         </div>
       </div>
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="lg:hidden bg-white border-t">
-          <div className="px-4 py-2 space-y-1">
+        <div className="lg:hidden bg-white border-t shadow-lg">
+          <div className="px-4 py-4 space-y-2">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 to={item.href}
-                className={`block px-3 py-3 text-base font-medium rounded-md ${
+                className={`block px-4 py-3 text-base font-medium rounded-lg ${
                   location.pathname === item.href
                     ? 'text-[#2D5B5F] bg-[#2D5B5F]/10'
-                    : 'text-gray-700 hover:text-[#2D5B5F] hover:bg-gray-100'
+                    : 'text-gray-700 hover:bg-gray-100'
                 }`}
               >
                 {item.label}
               </Link>
             ))}
-            <a href="tel:+6590170923" className="block px-3 py-3">
-              <Button className="w-full bg-[#2D5B5F] hover:bg-[#1A3D42] text-white">
-                <Phone className="w-4 h-4 mr-2" />
-                +65 9017 0923
-              </Button>
-            </a>
+            <div className="pt-4 space-y-2">
+              <a href="tel:+6590170923">
+                <Button className="w-full bg-[#2D5B5F] hover:bg-[#1A3D42] text-white">
+                  <Phone className="w-4 h-4 mr-2" />
+                  Call: +65 6235 9888
+                </Button>
+              </a>
+              <Link to="/contact">
+                <Button variant="outline" className="w-full border-[#2D5B5F] text-[#2D5B5F]">
+                  Book Appointment
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       )}

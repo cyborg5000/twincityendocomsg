@@ -4,6 +4,30 @@
 
 *This document supplements the official brand guideline PDF with implementation details for the website.*
 
+---
+
+## 🎨 Official Brand Fonts
+
+Based on the official brand guideline PDF:
+
+| Font Name | Usage | Website Alternative |
+|-----------|--------|---------------------|
+| **Gopher** | Body text, paragraphs | **Open Sans** (closest match) |
+| **Gopher Light** | Light body text | Open Sans Light (300) |
+| **Gopher Medium** | Subtitles, emphasis | Open Sans SemiBold (600) |
+| **Freight Disp Pro Bold** | Headlines, H1-H2 | **Montserrat Bold** (700) |
+| **Freight Disp Pro** | Subheadings, H3-H4 | Montserrat SemiBold (600) |
+
+### Font Weights Used in Brand
+
+| Weight | Font | Usage |
+|--------|------|-------|
+| **Regular (400)** | Gopher | Body text |
+| **Light (300)** | Gopher Light | Captions, fine print |
+| **Medium (500)** | Gopher Medium | Emphasis, labels |
+| **Regular (400)** | Freight Disp Pro | Subheadings |
+| **Bold (700)** | Freight Disp Pro Bold | Main headings, CTAs |
+
 ## 🎨 Brand Overview
 
 **Brand Name:** Twin City Endodontics Pte Ltd  
@@ -112,41 +136,52 @@
 
 ### Primary Typeface
 
+**Brand Fonts (from official PDF):**
+- **Gopher** - Primary body font
+- **Freight Display Pro** - Primary display/heading font
+
+**Website Implementation:**
+
 | Element | Font | Weight | Size | Color |
 |---------|------|--------|------|-------|
-| **Headings** | Inter | Bold (700) | 32-64px | `#2D5B5F` |
-| **Subheadings** | Inter | Semi-Bold (600) | 24px | `#2D5B5F` |
-| **Body Text** | Inter | Regular (400) | 16px | `#1A2E33` |
-| **Captions** | Inter | Regular (400) | 14px | `#6B7D82` |
-| **Buttons** | Inter | Medium (500) | 16px | White |
+| **H1 - Main Headings** | Montserrat (替代 Freight Disp Pro Bold) | 700 | 48-64px | `#2D5B5F` |
+| **H2 - Section Headings** | Montserrat (替代 Freight Disp Pro) | 700 | 32-40px | `#2D5B5F` |
+| **H3 - Subheadings** | Montserrat (替代 Freight Disp Pro) | 600 | 24-28px | `#2D5B5F` |
+| **Body Text** | Open Sans (替代 Gopher) | 400 | 16px | `#1A2E33` |
+| **Body Text Light** | Open Sans (替代 Gopher Light) | 300 | 14px | `#6B7D82` |
+| **Captions** | Open Sans | 400 | 12-14px | `#6B7D82` |
+| **Buttons** | Montserrat | 600 | 16px | White |
 
 ### Typography Scale
 
 | Element | Font Size | Line Height | Letter Spacing |
-|---------|-----------|-------------|---------------|
-| H1 | 48-64px | 1.1 | -0.5px |
-| H2 | 32-40px | 1.2 | -0.3px |
-| H3 | 24-28px | 1.3 | -0.2px |
-| Body | 16px | 1.6 | 0px |
-| Small | 14px | 1.5 | 0px |
+|---------|-----------|-------------|----------------|
+| H1 | 48-64px | 1.1 | -0.02em |
+| H2 | 32-40px | 1.2 | -0.02em |
+| H3 | 24-28px | 1.3 | -0.01em |
+| Body | 16px | 1.6 | 0em |
+| Small | 14px | 1.5 | 0em |
 
 ### Font Usage Examples
 
 ```css
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap');
+
 /* Headings */
-h1, h2, h3 {
-  font-family: 'Inter', sans-serif;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
+  letter-spacing: -0.02em;
   color: #2D5B5F;
-  letter-spacing: -0.5px;
 }
 
 /* Body text */
-p, li {
-  font-family: 'Inter', sans-serif;
+p, li, span, a, body {
+  font-family: 'Open Sans', sans-serif;
   font-weight: 400;
-  color: #1A2E33;
   line-height: 1.6;
+  color: #1A2E33;
 }
 ```
 

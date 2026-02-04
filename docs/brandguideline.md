@@ -1,5 +1,9 @@
 # Twin City Endodontics - Brand Guidelines
 
+> **Official Brand Guideline PDF:** [brand-guideline-official.pdf](./brand-guideline-official.pdf)
+
+*This document supplements the official brand guideline PDF with implementation details for the website.*
+
 ## 🎨 Brand Overview
 
 **Brand Name:** Twin City Endodontics Pte Ltd  

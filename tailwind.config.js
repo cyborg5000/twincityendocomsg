@@ -18,6 +18,15 @@ export default {
     },
     extend: {
       colors: {
+        // Brand Colors - Twin City Endodontics
+        brand: {
+          primary: '#2D5B5F',      // Deep Teal - Main brand color
+          accent: '#BCA868',       // Gold - Accent color
+          light: '#4A7A7F',       // Light teal for hover states
+          dark: '#1A2E33',        // Dark teal for text
+          cream: '#FAFBFC',       // Cream white backgrounds
+          muted: '#6B7D82',       // Muted text
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -51,6 +60,11 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+      },
+      backgroundImage: {
+        'brand-gradient': 'linear-gradient(135deg, #2D5B5F 0%, #4A7A7F 100%)',
+        'accent-gradient': 'linear-gradient(135deg, #BCA868 0%, #9A8A48 100%)',
+        'bg-gradient': 'linear-gradient(180deg, #FAFBFC 0%, #F0F4F5 100%)',
       },
       borderRadius: {
         lg: "var(--radius)",

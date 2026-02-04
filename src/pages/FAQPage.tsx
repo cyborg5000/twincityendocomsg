@@ -81,10 +81,10 @@ export function FAQPage() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="w-16 h-16 bg-[#144458]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-            <HelpCircle className="w-8 h-8 text-[#144458]" />
+          <div className="w-16 h-16 bg-[#2D5B5F]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <HelpCircle className="w-8 h-8 text-[#2D5B5F]" />
           </div>
-          <h1 className="text-4xl lg:text-5xl font-bold text-[#144458] mb-4">
+          <h1 className="text-4xl lg:text-5xl font-bold text-[#2D5B5F] mb-4">
             Frequently Asked Questions
           </h1>
           <p className="text-lg text-gray-600">
@@ -98,7 +98,7 @@ export function FAQPage() {
             <Accordion type="single" collapsible className="space-y-4">
               {faqs.map((faq, index) => (
                 <AccordionItem key={index} value={`item-${index}`} className="border-b last:border-0">
-                  <AccordionTrigger className="text-left text-lg font-medium text-[#144458] hover:text-[#086466] py-4">
+                  <AccordionTrigger className="text-left text-lg font-medium text-[#2D5B5F] hover:text-[#BCA868] py-4">
                     {faq.question}
                   </AccordionTrigger>
                   <AccordionContent className="text-gray-600 leading-relaxed pb-4 whitespace-pre-line">
@@ -112,7 +112,7 @@ export function FAQPage() {
 
         {/* Still Have Questions */}
         <div className="mt-12 text-center">
-          <h2 className="text-2xl font-bold text-[#144458] mb-4">
+          <h2 className="text-2xl font-bold text-[#2D5B5F] mb-4">
             Still Have Questions?
           </h2>
           <p className="text-gray-600 mb-6">
@@ -120,13 +120,13 @@ export function FAQPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
-              <Button size="lg" className="bg-[#144458] hover:bg-[#0d2f3d] text-white">
+              <Button size="lg" className="bg-[#2D5B5F] hover:bg-[#1A3D42] text-white">
                 Contact Us
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
             </Link>
             <a href="tel:+6590170923">
-              <Button size="lg" variant="outline" className="border-[#144458] text-[#144458]">
+              <Button size="lg" variant="outline" className="border-[#2D5B5F] text-[#2D5B5F]">
                 Call +65 9017 0923
               </Button>
             </a>
@@ -143,7 +143,7 @@ export function FAQPage() {
             <Link key={link.title} to={link.href}>
               <Card className="border-0 shadow hover:shadow-md transition-shadow cursor-pointer h-full">
                 <CardContent className="p-6 text-center">
-                  <h3 className="font-semibold text-[#144458] mb-1">{link.title}</h3>
+                  <h3 className="font-semibold text-[#2D5B5F] mb-1">{link.title}</h3>
                   <p className="text-sm text-gray-500">{link.desc}</p>
                 </CardContent>
               </Card>

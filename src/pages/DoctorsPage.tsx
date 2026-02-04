@@ -54,7 +54,7 @@ export function DoctorsPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl lg:text-5xl font-bold text-[#144458] mb-4">
+          <h1 className="text-4xl lg:text-5xl font-bold text-[#2D5B5F] mb-4">
             Meet Our Endodontists
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -76,8 +76,8 @@ export function DoctorsPage() {
                 />
               </div>
               <CardContent className="p-6 text-center">
-                <h3 className="text-xl font-bold text-[#144458] mb-1">{doctor.name}</h3>
-                <p className="text-[#086466] font-medium mb-2">{doctor.title}</p>
+                <h3 className="text-xl font-bold text-[#2D5B5F] mb-1">{doctor.name}</h3>
+                <p className="text-[#BCA868] font-medium mb-2">{doctor.title}</p>
                 <p className="text-gray-500 text-sm">{doctor.education}</p>
               </CardContent>
             </Card>
@@ -85,10 +85,10 @@ export function DoctorsPage() {
         </div>
 
         {/* Support Team */}
-        <div className="mt-16 bg-gradient-to-br from-[#144458]/5 to-[#086466]/10 rounded-2xl p-8 lg:p-12">
+        <div className="mt-16 bg-gradient-to-br from-[#2D5B5F]/5 to-[#BCA868]/10 rounded-2xl p-8 lg:p-12">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div className="space-y-4">
-              <h2 className="text-2xl lg:text-3xl font-bold text-[#144458]">
+              <h2 className="text-2xl lg:text-3xl font-bold text-[#2D5B5F]">
                 Supported by Certified Dental Nurses
               </h2>
               <p className="text-gray-600 leading-relaxed">
@@ -115,14 +115,14 @@ export function DoctorsPage() {
 
         {/* CTA */}
         <div className="mt-16 text-center">
-          <h2 className="text-2xl font-bold text-[#144458] mb-4">
+          <h2 className="text-2xl font-bold text-[#2D5B5F] mb-4">
             Ready to Book Your Consultation?
           </h2>
           <p className="text-gray-600 mb-6">
             Visit one of our specialists today to discuss your treatment options.
           </p>
           <Link to="/contact">
-            <Button size="lg" className="bg-[#144458] hover:bg-[#0d2f3d] text-white">
+            <Button size="lg" className="bg-[#2D5B5F] hover:bg-[#1A3D42] text-white">
               Book an Appointment
               <ArrowRight className="ml-2 w-4 h-4" />
             </Button>

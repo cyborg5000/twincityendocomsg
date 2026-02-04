@@ -55,8 +55,8 @@ export function Navigation() {
                 to={item.href}
                 className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
                   location.pathname === item.href
-                    ? 'text-[#144458] bg-[#144458]/10'
-                    : 'text-gray-700 hover:text-[#144458] hover:bg-gray-100'
+                    ? 'text-[#2D5B5F] bg-[#2D5B5F]/10'
+                    : 'text-gray-700 hover:text-[#2D5B5F] hover:bg-gray-100'
                 }`}
               >
                 {item.label}
@@ -67,7 +67,7 @@ export function Navigation() {
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
             <a href="tel:+6590170923">
-              <Button className="bg-[#144458] hover:bg-[#0d2f3d] text-white">
+              <Button className="bg-[#2D5B5F] hover:bg-[#1A3D42] text-white">
                 <Phone className="w-4 h-4 mr-2" />
                 +65 9017 0923
               </Button>
@@ -94,15 +94,15 @@ export function Navigation() {
                 to={item.href}
                 className={`block px-3 py-3 text-base font-medium rounded-md ${
                   location.pathname === item.href
-                    ? 'text-[#144458] bg-[#144458]/10'
-                    : 'text-gray-700 hover:text-[#144458] hover:bg-gray-100'
+                    ? 'text-[#2D5B5F] bg-[#2D5B5F]/10'
+                    : 'text-gray-700 hover:text-[#2D5B5F] hover:bg-gray-100'
                 }`}
               >
                 {item.label}
               </Link>
             ))}
             <a href="tel:+6590170923" className="block px-3 py-3">
-              <Button className="w-full bg-[#144458] hover:bg-[#0d2f3d] text-white">
+              <Button className="w-full bg-[#2D5B5F] hover:bg-[#1A3D42] text-white">
                 <Phone className="w-4 h-4 mr-2" />
                 +65 9017 0923
               </Button>

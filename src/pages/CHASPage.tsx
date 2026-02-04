@@ -43,7 +43,7 @@ export function CHASPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl lg:text-5xl font-bold text-[#144458] mb-4">
+          <h1 className="text-4xl lg:text-5xl font-bold text-[#2D5B5F] mb-4">
             CHAS & Dental Subsidies
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -53,11 +53,11 @@ export function CHASPage() {
         </div>
 
         {/* Info Card */}
-        <Card className="border-0 shadow-lg mb-8 bg-gradient-to-br from-[#144458]/5 to-[#086466]/10">
+        <Card className="border-0 shadow-lg mb-8 bg-gradient-to-br from-[#2D5B5F]/5 to-[#BCA868]/10">
           <CardContent className="p-6 flex items-start gap-4">
-            <Info className="w-6 h-6 text-[#144458] flex-shrink-0 mt-1" />
+            <Info className="w-6 h-6 text-[#2D5B5F] flex-shrink-0 mt-1" />
             <div>
-              <h3 className="font-semibold text-[#144458] mb-2">About CHAS</h3>
+              <h3 className="font-semibold text-[#2D5B5F] mb-2">About CHAS</h3>
               <p className="text-gray-600 text-sm">
                 The Community Health Assist Scheme (CHAS) provides subsidies for dental 
                 treatments at participating clinics. Different subsidy tiers apply based 
@@ -71,7 +71,7 @@ export function CHASPage() {
         <div className="space-y-8">
           {/* Table 1 */}
           <Card className="border-0 shadow-lg overflow-hidden">
-            <CardHeader className="bg-[#144458] text-white">
+            <CardHeader className="bg-[#2D5B5F] text-white">
               <CardTitle>Dental Services & Claim Limits</CardTitle>
             </CardHeader>
             <CardContent className="p-0">
@@ -142,7 +142,7 @@ export function CHASPage() {
 
           {/* Table 3 - Root Canal */}
           <Card className="border-0 shadow-lg overflow-hidden">
-            <CardHeader className="bg-[#086466] text-white">
+            <CardHeader className="bg-[#BCA868] text-white">
               <CardTitle>Root Canal Treatment</CardTitle>
             </CardHeader>
             <CardContent className="p-0">
@@ -200,14 +200,14 @@ export function CHASPage() {
 
         {/* CTA */}
         <div className="mt-12 text-center">
-          <h2 className="text-2xl font-bold text-[#144458] mb-4">
+          <h2 className="text-2xl font-bold text-[#2D5B5F] mb-4">
             Have Questions About Subsidies?
           </h2>
           <p className="text-gray-600 mb-6">
             Contact us to learn more about CHAS and other available subsidies.
           </p>
           <Link to="/contact">
-            <Button size="lg" className="bg-[#144458] hover:bg-[#0d2f3d] text-white">
+            <Button size="lg" className="bg-[#2D5B5F] hover:bg-[#1A3D42] text-white">
               Contact Us
               <ArrowRight className="ml-2 w-4 h-4" />
             </Button>

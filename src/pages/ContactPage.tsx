@@ -25,7 +25,7 @@ export function ContactPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl lg:text-5xl font-bold text-[#144458] mb-4">
+          <h1 className="text-4xl lg:text-5xl font-bold text-[#2D5B5F] mb-4">
             Contact Us
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -38,28 +38,28 @@ export function ContactPage() {
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {locations.map((location) => (
             <Card key={location.name} className="border-0 shadow-lg overflow-hidden">
-              <div className="h-2 bg-[#144458]" />
+              <div className="h-2 bg-[#2D5B5F]" />
               <CardContent className="p-8">
-                <h2 className="text-2xl font-bold text-[#144458] mb-6">{location.name}</h2>
+                <h2 className="text-2xl font-bold text-[#2D5B5F] mb-6">{location.name}</h2>
                 <div className="space-y-4">
                   <div className="flex items-start">
-                    <MapPin className="w-5 h-5 text-[#086466] mt-1 mr-3 flex-shrink-0" />
+                    <MapPin className="w-5 h-5 text-[#BCA868] mt-1 mr-3 flex-shrink-0" />
                     <span className="text-gray-700">{location.address}</span>
                   </div>
                   <div className="flex items-center">
-                    <Phone className="w-5 h-5 text-[#086466] mr-3 flex-shrink-0" />
-                    <a href={`tel:${location.phone.replace(/\s/g, '')}`} className="text-gray-700 hover:text-[#144458]">
+                    <Phone className="w-5 h-5 text-[#BCA868] mr-3 flex-shrink-0" />
+                    <a href={`tel:${location.phone.replace(/\s/g, '')}`} className="text-gray-700 hover:text-[#2D5B5F]">
                       {location.phone}
                     </a>
                   </div>
                   <div className="flex items-center">
-                    <Mail className="w-5 h-5 text-[#086466] mr-3 flex-shrink-0" />
-                    <a href={`mailto:${location.email}`} className="text-gray-700 hover:text-[#144458]">
+                    <Mail className="w-5 h-5 text-[#BCA868] mr-3 flex-shrink-0" />
+                    <a href={`mailto:${location.email}`} className="text-gray-700 hover:text-[#2D5B5F]">
                       {location.email}
                     </a>
                   </div>
                   <div className="flex items-start">
-                    <Clock className="w-5 h-5 text-[#086466] mt-1 mr-3 flex-shrink-0" />
+                    <Clock className="w-5 h-5 text-[#BCA868] mt-1 mr-3 flex-shrink-0" />
                     <div className="text-gray-700">
                       {location.hours.map((hour) => (
                         <p key={hour}>{hour}</p>
@@ -73,7 +73,7 @@ export function ContactPage() {
                   <a
                     href={`tel:${location.phone.replace(/\s/g, '')}`}
                   >
-                    <Button className="w-full bg-[#144458] hover:bg-[#0d2f3d] text-white">
+                    <Button className="w-full bg-[#2D5B5F] hover:bg-[#1A3D42] text-white">
                       Call Now
                       <ArrowRight className="ml-2 w-4 h-4" />
                     </Button>
@@ -85,7 +85,7 @@ export function ContactPage() {
         </div>
 
         {/* Appointment Info */}
-        <div className="bg-gradient-to-br from-[#144458] to-[#086466] rounded-2xl p-8 lg:p-12 text-white">
+        <div className="bg-gradient-to-br from-[#2D5B5F] to-[#BCA868] rounded-2xl p-8 lg:p-12 text-white">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div className="space-y-4">
               <h2 className="text-3xl font-bold">Book Your Appointment</h2>
@@ -126,18 +126,18 @@ export function ContactPage() {
 
         {/* Map Placeholder */}
         <div className="mt-16">
-          <h2 className="text-2xl font-bold text-[#144458] mb-6 text-center">Our Locations</h2>
+          <h2 className="text-2xl font-bold text-[#2D5B5F] mb-6 text-center">Our Locations</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-gray-100 rounded-xl h-64 flex items-center justify-center">
               <div className="text-center">
-                <MapPin className="w-12 h-12 text-[#144458] mx-auto mb-2" />
+                <MapPin className="w-12 h-12 text-[#2D5B5F] mx-auto mb-2" />
                 <p className="text-gray-600 font-medium">Ngee Ann City</p>
                 <p className="text-sm text-gray-500">391B Orchard Road, #08-07</p>
               </div>
             </div>
             <div className="bg-gray-100 rounded-xl h-64 flex items-center justify-center">
               <div className="text-center">
-                <MapPin className="w-12 h-12 text-[#144458] mx-auto mb-2" />
+                <MapPin className="w-12 h-12 text-[#2D5B5F] mx-auto mb-2" />
                 <p className="text-gray-600 font-medium">Forum Shopping Mall</p>
                 <p className="text-sm text-gray-500">583 Orchard Road, #06-04</p>
               </div>

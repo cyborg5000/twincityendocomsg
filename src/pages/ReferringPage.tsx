@@ -8,7 +8,7 @@ export function ReferringPage() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl lg:text-5xl font-bold text-[#144458] mb-4">
+          <h1 className="text-4xl lg:text-5xl font-bold text-[#2D5B5F] mb-4">
             Referring Dentists
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -19,7 +19,7 @@ export function ReferringPage() {
 
         {/* Referral Form Info */}
         <Card className="border-0 shadow-lg mb-8">
-          <CardHeader className="bg-gradient-to-r from-[#144458] to-[#086466] text-white">
+          <CardHeader className="bg-gradient-to-r from-[#2D5B5F] to-[#BCA868] text-white">
             <CardTitle className="flex items-center gap-2">
               <FileText className="w-6 h-6" />
               Online Referral Form
@@ -41,7 +41,7 @@ export function ReferringPage() {
                   'Referral Notes',
                 ].map((item) => (
                   <div key={item} className="flex items-center text-gray-700">
-                    <span className="w-2 h-2 bg-[#086466] rounded-full mr-3" />
+                    <span className="w-2 h-2 bg-[#BCA868] rounded-full mr-3" />
                     {item}
                   </div>
                 ))}
@@ -57,7 +57,7 @@ export function ReferringPage() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button size="lg" className="bg-[#144458] hover:bg-[#0d2f3d] text-white">
+                <Button size="lg" className="bg-[#2D5B5F] hover:bg-[#1A3D42] text-white">
                   <Upload className="w-4 h-4 mr-2" />
                   Fill Online Referral Form
                   <ArrowRight className="ml-2 w-4 h-4" />
@@ -76,10 +76,10 @@ export function ReferringPage() {
           ].map((item) => (
             <Card key={item.step} className="border-0 shadow-lg text-center">
               <CardContent className="p-6">
-                <div className="w-16 h-16 bg-[#144458] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                <div className="w-16 h-16 bg-[#2D5B5F] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                   {item.step}
                 </div>
-                <h3 className="text-xl font-bold text-[#144458] mb-2">{item.title}</h3>
+                <h3 className="text-xl font-bold text-[#2D5B5F] mb-2">{item.title}</h3>
                 <p className="text-gray-600">{item.desc}</p>
               </CardContent>
             </Card>
@@ -87,9 +87,9 @@ export function ReferringPage() {
         </div>
 
         {/* Commitment */}
-        <Card className="border-0 shadow-lg bg-gradient-to-br from-[#144458]/5 to-[#086466]/10">
+        <Card className="border-0 shadow-lg bg-gradient-to-br from-[#2D5B5F]/5 to-[#BCA868]/10">
           <CardContent className="p-8">
-            <h2 className="text-2xl font-bold text-[#144458] mb-4">Our Commitment</h2>
+            <h2 className="text-2xl font-bold text-[#2D5B5F] mb-4">Our Commitment</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {[
                 'Professional endodontic care using advanced technology',
@@ -100,7 +100,7 @@ export function ReferringPage() {
                 'Open communication throughout the treatment',
               ].map((commitment, index) => (
                 <div key={index} className="flex items-start">
-                  <span className="w-2 h-2 bg-[#086466] rounded-full mt-2 mr-3 flex-shrink-0" />
+                  <span className="w-2 h-2 bg-[#BCA868] rounded-full mt-2 mr-3 flex-shrink-0" />
                   <span className="text-gray-700">{commitment}</span>
                 </div>
               ))}
@@ -110,17 +110,17 @@ export function ReferringPage() {
 
         {/* Contact CTA */}
         <div className="mt-12 text-center">
-          <h2 className="text-2xl font-bold text-[#144458] mb-4">
+          <h2 className="text-2xl font-bold text-[#2D5B5F] mb-4">
             Questions About Referring Patients?
           </h2>
           <p className="text-gray-600 mb-6">
             Contact our team for any questions about the referral process.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-[#144458] hover:bg-[#0d2f3d] text-white">
+            <Button size="lg" className="bg-[#2D5B5F] hover:bg-[#1A3D42] text-white">
               Call +65 9017 0923
             </Button>
-            <Button size="lg" variant="outline" className="border-[#144458] text-[#144458]">
+            <Button size="lg" variant="outline" className="border-[#2D5B5F] text-[#2D5B5F]">
               Email Us
             </Button>
           </div>
